@@ -36,11 +36,27 @@ function persistSavedIds(savedIds) {
   }
 }
 
+function loadInitialFilters() {
+  const params = new URLSearchParams(window.location.search);
+  const regionParam = params.get('region');
+  const sectorParam = params.get('sector');
+  const typeParam = params.get('type');
+  const monthParam = Number(params.get('month'));
+  return {
+    region: REGIONS.some((r) => r.id === regionParam) ? regionParam : 'All',
+    sector: SECTORS.includes(sectorParam) ? sectorParam : 'All',
+    type: ['all', 'endorsed', 'mission', 'industry'].includes(typeParam) ? typeParam : 'all',
+    month: monthParam >= 1 && monthParam <= 12 ? monthParam : null,
+  };
+}
+
+const initialFilters = loadInitialFilters();
+
 const state = {
-  region: 'All',
-  sector: 'All',
-  type: 'all', // 'all' | 'endorsed' | 'mission' | 'industry'
-  month: null, // 1..12 or null
+  region: initialFilters.region,
+  sector: initialFilters.sector,
+  type: initialFilters.type, // 'all' | 'endorsed' | 'mission' | 'industry'
+  month: initialFilters.month, // 1..12 or null
   query: '',
   onlySaved: false,
   selectedId: 'gulfood-2027',
@@ -457,6 +473,39 @@ function renderApp() {
 
         ${renderTimeline(matchingAllMonths)}
         ${renderDirectory(filtered)}
+
+        <section class="faq-section" aria-labelledby="faq-heading">
+          <div class="faq-head">
+            <p class="eyebrow">Common Questions</p>
+            <h2 id="faq-heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item" open>
+              <summary>What are USDA-endorsed international trade shows?</summary>
+              <p>USDA-endorsed trade shows are major international food and agricultural exhibitions where the USDA Foreign Agricultural Service (FAS) partners with show organizers to host an official USA Pavilion, providing U.S. exporters and cooperators with turnkey booth space, local FAS/ATO market briefings, and buyer matchmaking support.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What are the official 2027 USDA FAS Agribusiness Trade Missions?</summary>
+              <p>USDA FAS announced six official Agribusiness Trade Mission destinations for 2027: Costa Rica, Ecuador, Poland, South Korea, Thailand, and Venezuela. All six appear on the map as toggleable Trade Mission pins with direct links to the FAS Trade Missions page for application windows.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I export my 2027 trade show schedule to Outlook, Google Calendar, or Apple Calendar?</summary>
+              <p>Click the star icon next to any show (or <strong>Add to My 2027 Schedule</strong> in the detail panel) to build your shortlist, then click <strong>Export .ics</strong> in the directory bar. The downloaded <code>.ics</code> file imports cleanly into Microsoft Outlook, Google Calendar, and Apple Calendar with full dates, venue locations, and official show links.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I share my custom 2027 schedule or a pre-filtered view with my team?</summary>
+              <p>Yes. Once you star one or more shows, click <strong>Copy Schedule Link</strong> to get a direct URL encoding your exact shortlist (<code>events.duess.com/?saved=...</code>). You can also share pre-filtered links by region or commodity sector (such as <code>?region=Europe</code>), or export your shortlist to CSV for UES travel budgeting.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Why are non-endorsed shows like Seafood Expo Global and ProWein included?</summary>
+              <p>Many USAEDC cooperators and state regional trade groups run major booths and buyer programs at flagship sector shows that are not formally USDA-endorsed. Every event is clearly badged as <strong>USDA-Endorsed USA Pavilion</strong>, <strong>USDA Trade Mission</strong>, or <strong>Major Industry Show</strong>, and you can filter to USDA-Endorsed Pavilions only with one click.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How do I suggest a missing 2027 trade show or date update?</summary>
+              <p>Email <a href="mailto:andreas@duess.com">andreas@duess.com</a> with the show name, dates, venue, and official link. Because organizer schedules and USA Pavilion deadlines can shift, always confirm directly with USDA FAS before booking travel.</p>
+            </details>
+          </div>
+        </section>
 
         <section class="source-note">
           <p>
