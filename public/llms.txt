@@ -1,0 +1,36 @@
+# Global Ag Trade Show Map & 2027 Calendar (events.duess.com)
+
+> Free, zero-login interactive world map and 2027 calendar of USDA-endorsed agricultural trade shows (USA Pavilions), official 2027 USDA FAS Agribusiness Trade Missions, and major global food exhibitions, built for USAEDC members and FAS cooperators by Duess Strategies Inc.
+
+## What It Covers (39 Events Across 23 Countries)
+
+- **26 USDA-Endorsed Trade Shows (USA Pavilions):** ISM Cologne (Jan 31-Feb 3), Fruit Logistica Berlin (Feb 3-5), Wine Paris (Feb 15-17), BIOFACH Nuremberg (Feb 16-19), FOODEX Japan Tokyo (Mar 9-12), Gulfood Dubai (Mar 15-19), Food & Hotel Vietnam (Mar 24-26), FHA Singapore (Apr 20-23), SIAL Canada Toronto (Apr 27-29), Expo ANTAD Guadalajara (Apr 27-29), SIAL Shanghai (May), THAIFEX - Anuga Asia Bangkok (May 25-29), Seoul Food & Hotel (Jun 8-11), Food Taipei (Jun 23-26), SIAL India Mumbai (Jun 24-26), Food & Hotel Indonesia (Jul 21-24), SMTS Fresh Solution Tokyo (Jul 28-30), Fi Asia Thailand (Sep 1-3), Fine Food Australia Sydney (Sep 6-9), Asia Fruit Logistica Hong Kong (Sep 7-9), Expo Alimentaria Peru (Sep 22-24), Americas Food & Beverage Miami (Sep 27-29), Anuga Cologne (Oct 9-13), Gulfood Manufacturing Dubai (Nov 1-3), FHC Shanghai (Nov), and Fi Europe Paris (Nov 30-Dec 2).
+- **6 Official 2027 USDA FAS Agribusiness Trade Missions:** Costa Rica, Ecuador, Poland, South Korea, Thailand, and Venezuela.
+- **7 Major Global Industry Staples:** ProWein (Düsseldorf), VIV Asia (Bangkok), Dubai WoodShow, Seafood Expo Global (Barcelona), Petfood Forum (Kansas City), SPACE (Rennes), and Fruit Attraction (Madrid).
+
+## Key Features
+
+- Interactive Natural Earth vector world map with regional zoom (Europe, Asia-Pacific, Middle East & Africa, Americas) and commodity sector filters.
+- 12-month 2027 show-density timeline with FAS / USAEDC planning windows.
+- Custom "My 2027 Schedule" builder with single or bulk RFC 5545 `.ics` calendar export (Outlook, Google Calendar, Apple Calendar), CSV export for travel budgets, and shareable shortlist URLs (`?saved=...`).
+
+## Direct Deep Links
+
+- Full map & calendar: https://events.duess.com/
+- Filter by region: `https://events.duess.com/?region=Europe` (or `Asia-Pacific`, `Americas`, `Middle+East+%26+Africa`)
+- Filter by type: `https://events.duess.com/?type=endorsed` or `https://events.duess.com/?type=mission`
+- Filter by commodity sector: `https://events.duess.com/?sector=Fresh+Produce+%26+Tree+Nuts`
+
+## Freshness
+
+Audited on the 1st of every month via GitHub Actions for newly announced 2027 Trade Mission dates, TBD shows, and organizer link updates, with automatic Cloudflare Pages deployment on updates.
+
+## Related Free USAEDC Tools by Duess Strategies
+
+- [AI for FAS Cooperators & USAEDC Members](https://duess.com/for-usaedc-members/)
+- [U.S. Ag Export Scorecard & Untapped Markets](https://trade.duess.com/)
+- [UES Copy-Forward Checker](https://ues-checker.duess.com/)
+- [One-Page FAS AI Policy Generator](https://duess.com/ai-policy/#fas)
+- [AI Workflow Worksheet](https://duess.com/worksheet/)
+
+Publisher: Duess Strategies Inc. (Andreas Duess) — https://duess.com/ — andreas@duess.com
