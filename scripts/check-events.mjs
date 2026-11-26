@@ -23,12 +23,15 @@ for (const url of uniqueUrls) {
   try {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 8000);
-    const res = await fetch(url, {
-      method: 'HEAD',
+    const check = (method) => fetch(url, {
+      method,
       redirect: 'follow',
       signal: ctrl.signal,
       headers: { 'User-Agent': 'events-duess-link-check/1.0 (+https://events.duess.com)' },
     });
+    let res = await check('HEAD');
+    // some sites answer HEAD with 404/405 but serve the page to GET (sialindia.com)
+    if (!res.ok) res = await check('GET');
     clearTimeout(timer);
     if (res.status === 404 || res.status === 410) {
       brokenLinks.push({ url, status: res.status });
