@@ -483,6 +483,10 @@ function renderApp() {
           </div>
           <div class="faq-list">
             <details class="faq-item" open>
+              <summary>How fresh is the data?</summary>
+              <p>The 2027 schedule is audited on the 1st of every month for newly announced USDA FAS Agribusiness Trade Mission dates, TBD exhibition schedules, and organizer link changes, and updates automatically whenever new dates are confirmed. Because trade show dates and USA Pavilion registration deadlines can shift, always confirm directly with USDA FAS and the show organizer before booking travel.</p>
+            </details>
+            <details class="faq-item">
               <summary>What are USDA-endorsed international trade shows?</summary>
               <p>USDA-endorsed trade shows are major international food and agricultural exhibitions where the USDA Foreign Agricultural Service (FAS) partners with show organizers to host an official USA Pavilion, providing U.S. exporters and cooperators with turnkey booth space, local FAS/ATO market briefings, and buyer matchmaking support.</p>
             </details>
