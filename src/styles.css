@@ -803,3 +803,118 @@ button, select, input { font: inherit; }
     gap: 0.35rem 0.9rem;
   }
 }
+
+/* Canonical Shared Tokens, Header, Hero, and Footer (matches trade.duess.com & ues-checker.duess.com) */
+:root {
+  --d1b: clamp(2.25rem, 1.2rem + 3.4vw, 3.75rem);
+  --t-lg: 1.15rem;
+  --t-xs: 0.875rem;
+  --t-eyebrow: 0.75rem;
+  --gutter: clamp(1.25rem, 0.5rem + 3.3vw, 4rem);
+  --section-y: clamp(2.75rem, 1.8rem + 3.5vw, 4.25rem);
+  --max-width: 1312px;
+}
+html { font-size: 17px; }
+@media (max-width: 768px) { html { font-size: 16px; } }
+.header-bar { padding-block: 0.875rem; }
+.site-logo { height: 52px; width: auto; display: block; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--midnight);
+  color: var(--on-ink-soft);
+  padding: calc(var(--section-y) * 0.8) 0 var(--section-y);
+  border-bottom: 0;
+}
+.hero-glow {
+  position: absolute;
+  inset: -20% -10% auto;
+  height: 75%;
+  pointer-events: none;
+  background: radial-gradient(55% 50% at 25% 15%, rgba(224, 152, 44, 0.14), transparent 60%);
+}
+.hero-inner { position: relative; }
+.hero .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin: 0 0 1rem;
+  color: var(--amber);
+}
+.hero .eyebrow .dash {
+  display: block;
+  width: 44px;
+  height: 2px;
+  background: var(--amber);
+  flex: none;
+}
+.hero h1 {
+  font-size: var(--d1b);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem;
+}
+.hero-lead {
+  font-size: var(--t-lg);
+  line-height: 1.6;
+}
+.site-footer {
+  background: var(--midnight);
+  border-top: 1px solid var(--edge);
+  color: var(--on-ink-soft);
+  padding: 2.25rem 0 1.75rem;
+  font-size: var(--t-xs);
+}
+.site-footer a {
+  color: var(--on-ink-soft);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: var(--on-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--amber);
+  text-underline-offset: 3px;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.75rem;
+}
+.footer-base {
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--edge);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  color: var(--on-ink-mute);
+}
+.footer-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+.footer-legal {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.25rem;
+}
+.footer-help {
+  color: var(--on-ink-mute);
+}

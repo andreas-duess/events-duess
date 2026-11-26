@@ -364,7 +364,6 @@ function renderApp() {
           <a class="site-name" href="https://duess.com/for-usaedc-members/" title="Back to Duess Strategies for USAEDC Members">
             <img src="/ds-logo-light.svg" alt="Duess Strategies" class="site-logo" />
           </a>
-          <a class="header-tool-tag" href="/">events.duess.com</a>
         </div>
         <nav class="header-nav" aria-label="Free USAEDC resources">
           <a class="header-link" href="https://trade.duess.com/">Export Scorecard</a>
@@ -372,15 +371,15 @@ function renderApp() {
           <a class="header-link" href="https://ues-checker.duess.com/">UES Checker</a>
           <a class="header-link" href="https://duess.com/ai-policy/#fas">FAS AI Policy</a>
           <a class="header-link" href="https://duess.com/worksheet/">Worksheet</a>
-          <a class="header-link" href="https://duess.com/baltimore/">Slides</a>
         </nav>
       </div>
     </header>
 
     <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="inner hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow eyebrow-light">Free tool for USAEDC members &amp; FAS cooperators</p>
+          <p class="eyebrow"><span class="dash" aria-hidden="true"></span>Free tool for FAS cooperators &amp; USAEDC members</p>
           <h1>Global Ag Trade Show Map &amp; <em>2027 Calendar</em></h1>
           <p class="hero-lead">
             Explore USDA-endorsed USA Pavilions, official 2027 FAS Agribusiness Trade Missions, and major global food and ag exhibitions in one place.<br />
@@ -528,20 +527,21 @@ function renderApp() {
         <div class="footer-top">
           <div class="footer-links">
             <a href="https://duess.com/for-usaedc-members/">AI for FAS Cooperators</a>
-            <a href="https://trade.duess.com/">U.S. Ag Export Scorecard</a>
-            <a href="https://events.duess.com/">Global Ag Trade Show Map</a>
-            <a href="https://ues-checker.duess.com/">UES Copy-Forward Checker</a>
-            <a href="https://duess.com/ai-policy/#fas">One-Page FAS AI Policy</a>
-            <a href="https://duess.com/worksheet/">AI Workflow Worksheet</a>
-            <a href="https://duess.com/baltimore/">Baltimore Forum Slides</a>
+            <a href="https://trade.duess.com/">Export Scorecard</a>
+            <a href="https://events.duess.com/">Trade Show Map</a>
+            <a href="https://ues-checker.duess.com/">UES Checker</a>
+            <a href="https://duess.com/ai-policy/#fas">FAS AI Policy</a>
+            <a href="https://duess.com/worksheet/">Workflow Worksheet</a>
           </div>
         </div>
         <div class="footer-base">
-          <span>&copy; 2026 Duess Strategies Inc.</span>
-          <ul class="footer-legal">
-            <li><a href="/privacy-policy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-          </ul>
+          <div class="footer-meta">
+            <span>&copy; 2026 Duess Strategies Inc.</span>
+            <ul class="footer-legal">
+              <li><a href="/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="/terms/">Terms of Use</a></li>
+            </ul>
+          </div>
           <span class="footer-help">Help and support: Email <a href="mailto:andreas@duess.com">andreas@duess.com</a>.</span>
         </div>
       </div>
